@@ -1,0 +1,29 @@
+CompileFlags:
+  Add:
+    - -ID:/Scoop/apps/sdcc/current/include # change it to your sdcc inc dir
+    - -D__SDCC
+    - -D__interrupt(x)=
+    - -D__trap=
+    - -std=c2y
+  Remove:
+    - -mstm8
+    - --fsigned-char
+    - --code-loc
+    - --code-size
+    - --iram-loc
+    - --iram-size
+    - --xram-loc
+    - --xram-size
+    - --opt-code-size
+    - --opt-code-speed
+    - --std-sdcc2y
+Diagnostics:
+  Suppress:
+    - main_returns_nonint
+    - pp_including_mainfile_in_preamble
+Documentation:
+  CommentFormat: Doxygen
+Hover:
+  ShowAKA: false
+Completion:
+  MacroFilter: FuzzyMatch
